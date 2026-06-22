@@ -5,7 +5,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/<username>/robotframework-cicd-demo.git'
+                git 'https://github.com/LEOPATRICKP/robotframework-cicd-demo.git'
             }
         }
 
@@ -17,14 +17,14 @@ pipeline {
 
         stage('Run Robot Tests') {
             steps {
-                bat 'robot Tests/'
+                bat 'robot --outputdir Results Tests/'
             }
         }
     }
 
     post {
         always {
-            archiveArtifacts artifacts: '*.html'
+            archiveArtifacts artifacts: 'Results/*'
         }
     }
 }
