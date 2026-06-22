@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.5 on win32)" generated="2026-06-22T12:14:41.275453" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="C:\Users\UIDAESL101.DESKTOP-JRUOALQ\PycharmProjects\robotframework-cicd-demo\Tests\login.robot">
+<test id="s1-t1" name="Valid Login" line="12">
+<kw name="Open GitHub">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-22T12:14:41.824303" level="INFO">Opening browser 'chrome' to base url 'https://github.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-22T12:14:41.824049" elapsed="3.268766"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-06-22T12:14:45.093328" elapsed="0.244063"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-06-22T12:14:45.338165" elapsed="0.006136"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-06-22T12:14:45.346792" level="INFO">Clicking element 'link:Sign in'.</msg>
+<arg>link:Sign in</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-22T12:14:45.345207" elapsed="1.716692"/>
+</kw>
+<status status="PASS" start="2026-06-22T12:14:41.823366" elapsed="5.238728"/>
+</kw>
+<kw name="Login To GitHub">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:login_field</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-22T12:14:47.063741" elapsed="0.046407"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-22T12:14:47.110583" level="INFO">Typing text 'leopatrick4142@gmail.com' into text field 'id:login_field'.</msg>
+<arg>id:login_field</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-22T12:14:47.110321" elapsed="0.124251"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2026-06-22T12:14:47.235601" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2026-06-22T12:14:47.278341" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id:password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-22T12:14:47.235044" elapsed="0.121999"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-06-22T12:14:47.357414" level="INFO">Clicking button 'name:commit'.</msg>
+<arg>name:commit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-22T12:14:47.357201" elapsed="0.091531"/>
+</kw>
+<arg>${EMAIL}</arg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2026-06-22T12:14:47.062786" elapsed="0.386072"/>
+</kw>
+<kw name="Verify Login Success">
+<kw name="Wait Until Page Does Not Contain Element" owner="SeleniumLibrary">
+<arg>id:login_field</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` disappears from the current page.</doc>
+<status status="PASS" start="2026-06-22T12:14:47.449633" elapsed="12.119172"/>
+</kw>
+<status status="PASS" start="2026-06-22T12:14:47.449256" elapsed="12.119680"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-06-22T12:14:59.569231" elapsed="2.555505"/>
+</kw>
+<status status="PASS" start="2026-06-22T12:14:41.822674" elapsed="20.302395"/>
+</test>
+<status status="PASS" start="2026-06-22T12:14:41.277627" elapsed="20.848305"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login" id="s1" pass="1" fail="0" skip="0">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
